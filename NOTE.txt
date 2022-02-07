@@ -1,0 +1,23 @@
+NOTE
+
+HTML, CSS từ Zero đến Hero
+______________________________________________
+ 
+Course: https://fullstack.edu.vn/courses/html-css 
+ https://docs.google.com/document/d/1oJG3vTV7llMJ1xFGuTi_2IypXqXJ8JzxfHEkEkeeMqM/edit?usp=sharing 
+
+
+Github course: git@github.com:kiensamson0000/HTML-CSS.git
+ 
+Other reference sources:
+https://www.w3schools.com/html/ 
+https://www.w3schools.com/css/ 
+https://goclamweb.com/chuyen-muc/lap-trinh-web/html-css-co-ban/ 
+https://nordiccoder.com/blog/huong-dan-hoc-html-va-css-co-ban-toan-tap-cap-nhat-2019/  
+https://freetuts.net/html-la-gi-bo-cuc-html-cua-mot-trang-web-420.html  
+https://www.youtube.com/watch?v=qz0aGYrrlhU  
+https://www.udemy.com/course/html5-fundamentals-for-beginners/learn/lecture/3518498#overview  
+https://www.coursera.org/learn/html-css-javascript-for-web-developers/home/welcome  
+http://html.net/tutorials/html/introduction.php    
+ 
+
