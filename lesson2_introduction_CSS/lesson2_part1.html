@@ -1,0 +1,480 @@
+<!-- PART 3: CSS BASIC -->
+<!----------------------------------------------------------------------------->
+
+
+<!-- 11. Sử dụng CSS trong HTML -->
+<!----------------------------------------------------------------------------->
+
+<!-- INTERNAL STYLE: STYLE in file, use tag <style> -->
+<!-- Element selector, ID selector, Class Selector -->
+<!-- ---------- -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F8 - CSS</title>
+    <style>
+        h1{
+            color: red;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>CSS in HTML</h1>
+        <ol>
+            <li>Internal</li>
+            <li>External</li>
+            <li>Inline</li>
+        </ol>
+    </div>
+    
+</body>
+</html> -->
+
+
+
+
+<!-- EXTERNAL STYLE: STYLE 1 files rieng, create file .css & link goto path file-->
+<!-- ---------- -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+</head>
+<body>
+    <div>
+        <h1>CSS in HTML</h1>
+        <ol>
+            <li>Internal</li>
+            <li>External</li>
+            <li>Inline</li>
+        </ol>
+    </div>
+    
+</body>
+</html> -->
+
+
+
+
+<!-- INLINE STYLE: STYLE từng DÒNG, use attribute style -->
+<!-- ---------- -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F8 - CSS</title>
+</head>
+<body>
+    <div>
+        <h1 style="color:yellow; font-size: 20px;">CSS in HTML</h1>
+        <ol>
+            <li>Internal</li>
+            <li>External</li>
+            <li>Inline</li>
+        </ol>
+    </div>
+    
+</body>
+</html> -->
+
+
+
+
+<!-- 12. ID và Class-->
+<!----------------------------------------------------------------------------->
+<!-- CSS selector: cach goi den cac Element selector, ID selector, Class Selector
+id: dinh danh duy nhat, syntax: #name_id, h1 
+h2: element selector 
+<h1> ID selector
+Class: su dung cho nhieu phan tu kha nhau, syntax: .name_class
+<h2> class selector  -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+</head>
+<body>
+    <div>
+        <h1 id="first1">CSS Selector?</h1>
+        <h1 id="first2">CSS Selector?</h1>
+        <h1 id="first3">CSS Selector?</h1>
+        <h2 class="second1">ID & CLASS?</h2>
+        <h2 class="second1">ID & CLASS?</h2>
+        <h3>Day la element selector </h3>
+    </div>
+
+    <div id="main">
+        <div class="header"></div>
+        <div class="nav"></div>
+        <div class="container">
+            <h1 class="heading">Tôi đang đều đặn học lập trình mỗi ngày</h1>
+        </div>
+        <div class="footer"></div>
+    </div>
+    
+</body>
+</html> -->
+
+
+
+<!-- 13. CSS selector -->
+<!----------------------------------------------------------------------------->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+</head>
+
+<body>
+    <h1>Heading 1</h1>
+    <p class="paragraph1">Paragraph 1</p>
+    <p class="paragraph p1">Paragraph 2</p>
+    <p class="paragraph">Paragraph 3</p>
+    <p>Paragraph 4</p> -->
+
+
+<!-- Trường hợp .children là con trực tiếp của .parent -->
+<!-- <div class="parent">
+        <div class="children">Children 1</div>
+        <div class="children">Children 2</div>
+        <div class="children">Children 3</div>
+    </div> -->
+
+<!-- Hoặc các .children nằm rải rác, miễn là con của .parent -->
+<!-- <div class="parent">
+        <div class="children">Children 1</div>
+
+        <div class="other-div">
+            <div class="children">Children 2</div>
+
+            <div class="other-div">
+                <div class="children">Children 3</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html> -->
+
+
+<!-- CONTINUE PART 3: CSS BASIC -->
+<!----------------------------------------------------------------------------->
+
+<!-- 14. DO UU TIEN TRONG CSS -->
+<!----------------------------------------------------------------------------->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+    <style>
+        * {
+            color: blueviolet;
+        }
+        li {
+            color: aqua;
+        }
+        h1 {
+            color: red !important;
+            font-size: 30px;
+        }
+        #heading-id{
+            color: aqua;
+        }
+        .heading-class {
+            color: blanchedalmond;
+        }
+        #heading-id.heading-class{
+            color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 id="heading-id" class="heading-class">Priority</h1>
+        <ol>
+            <li>Internal, External</li>
+            <li>Inline -1000</li>
+            <li>#id - 100</li>
+            <li>.class - 10</li>
+            <li>tag - 1</li>
+            <li>Equal Specifitical?</li>
+            <li>Universal selector and inherit?</li>
+        </ol>
+    </div>
+
+</body>
+
+</html> 
+
+-->
+
+
+
+<!-- 15. Đặt biến trong CSS -->
+<!----------------------------------------------------------------------------->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>CSS Variable111?</h1>
+        <h2>CSS Variable222?</h2>
+        <h3>CSS Variable333?</h3>
+    </div>
+
+</body>
+
+</html> -->
+
+
+<!-- 16. DON VI TRONG CSS -->
+<!----------------------------------------------------------------------------->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>F8 - CSSdd</title>
+    <link rel="stylesheet" href="lesson2.css">
+    <style>
+        .box {
+            width: 50%;
+            height: 100px;
+            background-color: red;
+        }
+        .box1 {
+            width: 50vw;
+            height: 100vh;
+            background-color: green;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        h2 {
+
+            font-size: 2.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div>
+        <h1>ABSOLUTE UNITS? </h1>  
+        <h2>note</h2>
+        <ol>
+            <li>px</li>
+            <li>pt</li>
+            <li>cm</li>
+            <li>mm</li>
+            <li>inch</li>
+        </ol>
+        <h1>RELATIVE UNITS? </h1>  
+        <ol>
+            <li>%</li>
+            <li>rem</li>
+            <li>em</li>
+        </ol>
+    </div>
+</body>
+
+</html> -->
+
+
+
+
+<!-- 17. CSS FUNCTION -->
+<!----------------------------------------------------------------------------->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+    <style>
+        .box {
+            width: calc(100px + 20%);
+            height: 100px;
+            background-color: rgb(70, 172, 133);
+        }
+        .box::before {
+            content: attr(data-title);
+        }
+        a::after {
+            content: "(" attr(href) ")";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" data-title="day la title "></div>
+    <a href="https://github.com/">GIthub ......</a>
+    <div>
+        <h1>CSS Functions</h1>  
+        <ol>
+            <li>var()</li>
+            <li>linear-gradient()</li>
+            <li>rgba()</li>
+            <li>rgb()</li>
+            <li>calc()</li>
+            <li>attr()</li>
+        </ol>
+    </div>
+</body>
+
+</html> -->
+
+
+
+
+<!-- 18. Pseudo classes -->
+<!----------------------------------------------------------------------------->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+    <style>
+        .box {
+            width: calc(100px + 20%);
+            height: 100px;
+            background-color: rgb(70, 172, 133);
+        }
+        h1:active {
+            color: blanchedalmond;
+        }
+        .box:hover {
+            background-color: blueviolet;
+        }
+        li:last-child {
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box" data-title="day la title "></div>
+    <div>
+        <h1>Pseudo classes</h1>  
+        <ol>
+            <li>:root</li>
+            <li>:hover</li>
+            <li>:active</li>
+            <li>:first-child</li>
+            <li>:last-child</li>
+        </ol>
+    </div>
+</body>
+
+</html> -->
+
+
+
+
+<!-- 19. Pseudo elements-->
+<!----------------------------------------------------------------------------->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+    <style>
+        .box {
+            width: calc(100px + 20%);
+            height: 100px;
+            background-color: rgb(70, 172, 133);
+        }
+        .box::before {
+            content: "xin chao wveryone";
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+        }
+        .box::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+        }
+        h1::first-letter{
+            font-size: 60px;
+        }
+        h1::first-line {
+            color: red;
+        }
+        h1::selection {
+            background-color: aqua;
+            color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" data-title="day la title "></div>
+    <div>
+        <h1>CSS Pseudo classes <br> demo first-line</h1>  
+        <ol>
+            <li>:rootsdsds</li>
+            <li>:hoversdsd</li>
+            <li>:activesdsd</li>
+            <li>:first-childsdsd</li>
+            <li>:last-childsds</li>
+        </ol>
+    </div>
+</body>
+
+</html> -->
