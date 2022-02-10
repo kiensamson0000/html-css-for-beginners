@@ -1,0 +1,67 @@
+--------------------------------------------------------------------------------------------------------------
+
+--[10/02/2022]
+today: 66 videos
+target: 24  --> 44
+mor: 10 videos
+aft: 10 v
+
+
+
+
+=============================================================================================================
+
+summary:
+
+111. HTML
+- Cau truc html
+- tag thong dung: <h1-h6>, <p>, <br>, <hr>, <img>, <a>, <ul>/<ol><li>, <table>, <input>, <button>, <div>
+- ..........
+- attribute in html: title,...
+- how to create fast folder & file
+
+
+222. CSS
+2.1 css in html: internal, external, inline
+- Css selector: chọn các ptu (elements) --> để style cho nó, (elememt selector, id selector, class selector)
+	=> note: +) 1 thẻ có thể cả ID & class, đặt 1/nhiều class cho thẻ html(cách nhau dấu cách) 
+		 +) cách đặt tên, e.g: class="box box1" (.name_1 {}: css chung, .name_2 {} css rieng) 
+		+) cách call id, class, elememt:
+	=> độ ưu tiên selector: 
+		+)  Internal, External: dựa vào cách đặt code, tag <style> gọi sau thì coi là mới nhất, đc ưu tiên hơn <link>, đặt code ngc lại <style>trước <link>, ưu tiên <link>
+		+)  !important -max > Inline -1000 > #id - 100 > .class - 10 > tag - 1 (ưu tiên điểm cao hơn)
+		+) Equal Specifitical? => Khi gọi lại trùng nhau => ưu tiên cái sau
+		+) Universal selector and inherit? (Độ ưu tiên Universal và inherit = 0). Universal: *{} , inherit: html {}
+2.2 CSS Variable: 
+	=> 2 type: gloal(declare in :root) & local(declare in tag)
+	=> 
+
+2.3 CSS Units: 
+	=> 2 type: absolute(tuyet doi): px,pt,cm,mm,... 
+		& relative(tuong doi):  +) %: change follow <body>, use: chia layout 
+					+) rem => change follow <html>, thg ddc use > (em)
+ 					+) em => change follow phụ thuộc vào thuộc tính cùng tên ở thẻ gần nhất, tính từ ngoài thẻ đó: ... -> <body> … -> <html> …. -> <style>
+					+) vw & vh (viewport-width & viewport-heiht): vw: khung nhìn ngang màn hình & vh:  khung nhìn dọc màn hình, vw,vh # %, vì: % phụ thuộc <body>, còn vw phụ thuộc khung nhìn. 
+
+					+) còn rất nhiều units khác,...
+2.4 CSS Funtions:
+	=> var(): 
+	=> linear-gradient(): dải màu chuyển đều đặn
+	=> rgba()
+	=> rgb(): màu 
+	=> calc(): tính toán, calc(10px + 12%)
+	=> attr():  get values của attr, thg use vs lớp giả(Pseudo elements) 
+
+	
+2.5 Pseudo classes:
+	=> :root
+	=> :hover  => when di chuot
+	=> :active   => when click
+	=> :first-child  => select đàu tiên.
+	=> :last-child
+
+
+2.6 Pseudo elements: 
+	=> 
+
+

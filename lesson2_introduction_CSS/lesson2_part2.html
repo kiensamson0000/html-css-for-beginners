@@ -88,13 +88,40 @@
 <!----------------------------------------------------------------------------->
 
 
-
-<!-- 24. CSS Background-clip  -->
+<!-- 24. CSS Background-clip & 25. CSS Background-image  -->
 <!----------------------------------------------------------------------------->
 
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- 25. CSS Background-image -->
-<!----------------------------------------------------------------------------->
+<head>
+    <meta charset="UTF-8">
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+    <style>
+        html, body {
+            margin: 0;
+        }
+        .header {
+            width: 100%;
+            height: 100vh;
+            /* background-image: url(https://i.pinimg.com/564x/58/5b/d9/585bd933cd662127978815757d101e07.jpg) ,url(https://media.gettyimages.com/photos/jeansebastien-rocques-wears-a-hoodie-sweater-a-bomber-jacket-a-bag-picture-id1205201453?s=612x612); */
+            /* background-image: linear-gradient(0deg, #333, #fff), url(); */
+            background-image: linear-gradient(0, rgba(255, 255, 0, 0.5), rgba(0, 255, 255, 0.5)), url(https://i.pinimg.com/564x/58/5b/d9/585bd933cd662127978815757d101e07.jpg);
+            /* background-size: 100%; */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+</body>
+
+</html>
+
 
 
 
@@ -103,12 +130,21 @@
 
 
 
+
+
+
 <!-- 27. CSS Background-origin  -->
 <!----------------------------------------------------------------------------->
 
 
+
+
+
 <!-- 28. CSS Background-position -->
 <!----------------------------------------------------------------------------->
+
+
+
 
 
 <!-- 29. CSS Background shorthand -->
@@ -124,8 +160,13 @@
 
 
 
+
+
 <!-- 30.CSS Position: Relative  -->
 <!----------------------------------------------------------------------------->
+
+
+
 
 
 
@@ -133,8 +174,14 @@
 <!----------------------------------------------------------------------------->
 
 
+
+
+
+
 <!-- 32. CSS Position: Fixed -->
 <!----------------------------------------------------------------------------->
+
+
 
 
 <!-- 33. CSS Position: Sticky -->
