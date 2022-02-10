@@ -88,10 +88,11 @@
 <!----------------------------------------------------------------------------->
 
 
-<!-- 24. CSS Background-clip & 25. CSS Background-image  -->
+<!-- 24. CSS Background-clip & 25. CSS Background-image &  26. CSS Background-size keywords 
+   27. CSS Background-origin &  28. CSS Background-position &  29. CSS Background shorthand-->
 <!----------------------------------------------------------------------------->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -107,10 +108,13 @@
             height: 100vh;
             /* background-image: url(https://i.pinimg.com/564x/58/5b/d9/585bd933cd662127978815757d101e07.jpg) ,url(https://media.gettyimages.com/photos/jeansebastien-rocques-wears-a-hoodie-sweater-a-bomber-jacket-a-bag-picture-id1205201453?s=612x612); */
             /* background-image: linear-gradient(0deg, #333, #fff), url(); */
-            background-image: linear-gradient(0, rgba(255, 255, 0, 0.5), rgba(0, 255, 255, 0.5)), url(https://i.pinimg.com/564x/58/5b/d9/585bd933cd662127978815757d101e07.jpg);
-            /* background-size: 100%; */
-            background-size: cover;
-            background-repeat: no-repeat;
+            /* background-image: linear-gradient(0, rgba(255, 255, 0, 0.5), rgba(0, 255, 255, 0.5)), url(https://i.pinimg.com/564x/58/5b/d9/585bd933cd662127978815757d101e07.jpg);
+            background-size: 100px; */
+            /* background-size: cover; */
+            /* background-repeat: no-repeat;
+            background-position: top; */
+            /* shorthand background: */
+            background: url(https://i.pinimg.com/564x/58/5b/d9/585bd933cd662127978815757d101e07.jpg) no-repeat center / contain;
         }
         
     </style>
@@ -120,52 +124,49 @@
     <div class="header"></div>
 </body>
 
-</html>
+</html> -->
 
 
 
 
-<!-- 26. CSS Background-size keywords -->
+<!-- PART 6: THUOC TINH VI TRI -->
 <!----------------------------------------------------------------------------->
-
-
-
-
-
-
-<!-- 27. CSS Background-origin  -->
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-<!-- 28. CSS Background-position -->
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-<!-- 29. CSS Background shorthand -->
-<!----------------------------------------------------------------------------->
-
-
-
-
-
-
-<!-- PART 6: Thuộc tính vị trí-->
-<!----------------------------------------------------------------------------->
-
-
-
 
 
 <!-- 30.CSS Position: Relative  -->
 <!----------------------------------------------------------------------------->
 
 
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+    <style>
+        h1 {
+            position: relative;
+            top: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Position</h1>
+        <ul>
+            <li>Relative</li>
+            <li>Absoute</li>
+            <li>Fixed</li>
+            <li>Sticky</li>
+        </ul>
+    </div>
+
+</body>
+
+</html> -->
 
 
 
@@ -174,12 +175,100 @@
 <!----------------------------------------------------------------------------->
 
 
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+    <style>
+        .box {
+            width: 100%;
+            height: 120px;
+            background-color: #333;
+            position: relative;
+        }
+        /* tip: làm mờ trang web */
+        /* .box-child {
+            background-color: #fff;
+            position:absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        } */
+
+        .box-child {
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            position:absolute;
+            top: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box-child"></div>
+    </div>
+    <h1>Position</h1>
+    <ul>
+        <li>Relative</li>
+        <li>Absoute</li>
+        <li>Fixed</li>
+        <li>Sticky</li>
+    </ul>
+</body>
+
+</html> -->
 
 
 
 
 <!-- 32. CSS Position: Fixed -->
 <!----------------------------------------------------------------------------->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+    <style>
+        .header {
+            width: 100%;
+            height: 120px;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+        }
+
+        ul {
+            height: 10000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="box-child"></div>
+    </div>
+    <h1>Position</h1>
+    <ul>
+        <li>Relative</li>
+        <li>Absoute</li>
+        <li>Fixed</li>
+        <li>Sticky</li>
+    </ul>
+</body>
+
+</html> -->
+
+
 
 
 
@@ -188,4 +277,41 @@
 <!----------------------------------------------------------------------------->
 
 
+<!-- <!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>F8 - CSS</title>
+    <link rel="stylesheet" href="lesson2.css">
+    <style>
+        h1 {
+            margin-top: 150px;
+            padding: 0 16px;
+            color: #fff;
+            background-color: #333;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+        }
+
+        ul {
+            height: 10000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="box-child"></div>
+    </div>
+    <h1>Position</h1>
+    <ul>
+        <li>Relative</li>
+        <li>Absoute</li>
+        <li>Fixed</li>
+        <li>Sticky</li>
+    </ul>
+</body>
+
+</html> -->
