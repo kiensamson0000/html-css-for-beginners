@@ -1,0 +1,156 @@
+
+/* CACH TRIEN KHAI CODE  */
+/* 
+    Phuong phap:
+        1. từ ngoài → trong
+        2. từ trên → dưới
+        3. tổng quát → chi tiết
+
+*/
+
+/* 
+    Chi tiet phan tich:
+        1. vị trí?
+        2. kích thước
+        3. màu sắc 
+        4. Kieu dang (kieu chu, hinh tron,...)
+
+*/
+
+
+/* 1. RESET CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 2. COMMON */
+
+
+
+
+
+
+/* 3. CSS */
+
+#main {
+
+}
+
+/* Header */
+#header {
+    width: 900;
+    height: 46px;
+    background-color: #000;
+
+}
+
+/* Nav */
+#nav {
+    display: inline-block;
+}
+
+#nav,
+#nav .subnav {
+    list-style-type: none;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li a {
+    font-size: 15px;
+    line-height: 46px;
+    padding: 0px 24px;
+    text-decoration: none;
+    display: block;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav .subnav li:hover a,
+#nav > li:hover > a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav {
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0px 12px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+/*  Search button */
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+
+
+
+
+
+
+/* Slider */
+#slider {
+
+}
+
+/* Content */
+#content {
+
+}
+
+/* Footer */
+#footer {
+
+}
+
+
+
+
+
+
+/* 4. MODAL */
