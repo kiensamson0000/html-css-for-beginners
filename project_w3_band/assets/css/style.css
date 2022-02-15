@@ -1,4 +1,24 @@
-/* Reset Css */
+
+/* CACH TRIEN KHAI CODE  */
+/* 
+    Phuong phap:
+        1. từ ngoài → trong
+        2. từ trên → dưới
+        3. tổng quát → chi tiết
+
+*/
+
+/* 
+    Chi tiet phan tich:
+        1. vị trí?
+        2. kích thước
+        3. màu sắc 
+        4. Kieu dang (kieu chu, hinh tron,...)
+
+*/
+
+
+/* 1. RESET CSS  */
 * {
     padding: 0;
     margin: 0;
@@ -9,19 +29,9 @@ html {
     scroll-behavior: smooth;
     font-family: Helvetica, Arial , sans-serif;
 }
-/* cách làm việc
-1. từ ngoài → trong
-2. từ trên → dưới
-3. tổng quát → chi tiết*/
- 
-/*Làm quen = cách đặt cnhg câu hỏi như:
-1. vị trí?
-2. kích thước
-3. màu sắc 
-4. Kieu dang (kieu chu, hinh tron,...)*/
 
 
-/* Common */
+/* 2. COMMON */
 
 .text-white {
     color: #fff !important;
@@ -97,7 +107,7 @@ html {
 
 
 
-/* Main */
+/* 3. MAIN */
 #main {
 
 }
@@ -113,6 +123,7 @@ html {
     /* overflow: hidden; */
 }
 
+/* Nav */
 #nav {
     display: inline-block;
 }
@@ -171,6 +182,7 @@ html {
     font-size: 14px;
 }
 
+/*  Menu, Search button */
 #header .mobile-menu-btn {
     position: absolute;
     top: 0;
@@ -204,6 +216,7 @@ html {
     line-height: 46px;
 }
 
+/* Slider  */
 #slider {
     position: relative;
     margin-top: 46px;
@@ -234,7 +247,7 @@ html {
 
 }
 
-
+/* Content  */
 #content {
 
 
@@ -324,7 +337,6 @@ html {
 }
 
 /* Places */
-
 .places-list {
     margin-top: 16px;
 }
@@ -406,7 +418,6 @@ html {
 
 
 /* Footer section */
-
 #footer {
     padding: 64px 16px;
     text-align: center;
