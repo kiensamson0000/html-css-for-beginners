@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM</title>
+    <link rel="stylesheet" href="bem.css">
+</head>
+<body>
+    <!-- NO BEM  -->
+    <div class="card">
+        <h3 class="heading">Saved!</h3>
+        <p class="desc">Look likes you got a greate idea.</p>
+        <div class="btn">OK, cool</div>
+    </div>
+
+    <!-- BEM  -->
+    <div class="card card--success">
+        <h3 class="card__heading">Saved!</h3>
+        <p class="card__desc">Look likes you got a greate idea.</p>
+        <div class="card__btn">OK, cool</div>
+    </div>
+
+    <div class="card card--error">
+        <h3 class="card__heading">Saved!</h3>
+        <p class="card__desc">Look likes you got a greate idea.</p>
+        <div class="card__btn">OK, cool</div>
+    </div>
+
+
+    <div>
+        <button class="btn btn--size-s btn--success">GO TO NEXT APPROVAL</button>
+        <button class="btn btn--size-s btn--warn">OK</button>
+        <button class="btn btn--size-s btn--danger">TRY AGAIN</button>
+    </div>
+
+    
+    <div>
+        <button class="btn btn--success ">GO TO NEXT APPROVAL</button>
+        <button class="btn btn--warn btn--disabled">OK</button>
+        <button class="btn btn--danger">TRY AGAIN</button>
+    </div>
+    
+    <div>
+        <button class="btn btn--size-l btn--success">GO TO NEXT APPROVAL</button>
+        <button class="btn btn--size-l btn--warn">OK</button>
+        <button class="btn btn--size-l btn--danger">TRY AGAIN</button>
+    </div>
+    
+</body>
+</html>
