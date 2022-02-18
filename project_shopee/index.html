@@ -44,10 +44,10 @@
                             </li>
                             <li class="header__navbar-item">
                                 <span class="header__navbar-title--no-pointer">Kết nối</span>
-                                <a href="" class="header__navbar-icon-link">
+                                <a href="https://www.facebook.com/ShopeeVN" class="header__navbar-icon-link" target="new">
                                     <i class="header__navbar-icon fab fa-facebook"></i>
                                 </a>
-                                <a href="" class="header__navbar-icon-link">
+                                <a href="https://www.instagram.com/accounts/login/?next=/Shopee_VN/" class="header__navbar-icon-link" target="new">
                                     <i class="header__navbar-icon fab fa-instagram"></i>
                                 </a>
                             </li>
@@ -110,7 +110,7 @@
                                 
                             </li>
                             <li class="header__navbar-item">
-                                <a href="" class="header__narbar-item-link">
+                                <a href="https://help.shopee.vn/vn/s/" class="header__narbar-item-link" target="new">
                                     <i class="header__navbar-icon far fa-question-circle"></i>
                                     Trợ giúp
                                 </a> 
@@ -133,8 +133,26 @@
                             </svg>
                         </div>
 
+                        <!-- header search -->
                         <div class="header__search">
-                            <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                            <div class="header__search-input-warp">
+                                <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                                
+                                <!-- search history -->
+                                <div class="header__search-history">
+                                    <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                    <ul class="header__search-history-list">
+                                        <li class="header__search-history-item">
+                                            <a href="">Kem dưỡng da</a>
+                                        </li>
+
+                                        <li class="header__search-history-item">
+                                            <a href="">Kem trị mụn</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
                             <div class="header__search-select">
                                 <span class="header__search-select-label">Trong shop</span>
                                 <i class="header__search-select-icon fas fa-angle-down"></i>
@@ -157,9 +175,22 @@
                             </button>
                         </div>
 
+                        <!-- header cart -->
                         <div class="header__cart">
-                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            <div class="header__cart-warp">
+                                <i class="header__cart-icon fas fa-shopping-cart"></i>
+                                <span class="header__cart-notice">3</span>
+                                <!-- No card: header__cart-list--no-cart -->
+                                <div class="header__cart-list">
+                                    <img src="./assets/img/no_cart.png" alt="" class="header__cart-no-cart-img">
+                                    <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
+                                </div>
+
+                            </div>
                         </div>
+
+
+
                     </div>
                 </div>
 
