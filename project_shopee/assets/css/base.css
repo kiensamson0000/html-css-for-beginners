@@ -24,6 +24,7 @@ html {
     box-sizing: border-box;
 }
 
+/* Resopnsive */
 .grid {
     width: 1200px;
     max-width: 100%;
@@ -34,10 +35,28 @@ html {
     width: 100%;
 }
 
-.grid_row {
+.grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
 }
+
+/* Test */
+.grid__column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.66667%;
+}
+
+.grid__column-10 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.33334%;
+}
+
+
+
 
 /* Animation  */
 @keyframes fadeIn{
@@ -94,7 +113,7 @@ html {
 
 /* Button style  */
 .btn {
-    min-width: 142px;
+    min-width: 124px;
     height: 34px;
     text-decoration: none;
     border: none;
