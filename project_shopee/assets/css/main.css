@@ -19,6 +19,7 @@
     
 }
 .header__navbar-item {
+    z-index: 2;
     margin: 0 8px;
     /* goc oxy cho thanh header__navbar-item--separate */
     position: relative;
@@ -54,7 +55,7 @@
     position: absolute;
     z-index: 1;
     padding: 6px 0px;
-    top: calc(100% + 4px);
+    top: calc(100% + 8px);
     right: 0;
     width: 160px;
     border-radius: 2px;
@@ -187,8 +188,6 @@
 
 
 /* Header QR code  */
-
-
 .header__qr {
     width: 186px;
     background-color: var(--white-color);
@@ -200,6 +199,8 @@
     border-radius: 2px;
     display: none;
     animation: fadeIn ease-in 0.3s;
+    z-index: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .header__qr::before {
@@ -583,6 +584,7 @@
     animation: fadeIn ease-in 0.2s;
     cursor: default;
     display: none;
+    z-index: 2; 
 }
 
 
@@ -598,6 +600,9 @@
 .header__cart-list-item {
     padding-left: 0;
     list-style: none;
+    /* set height gioi han(units la vh -> khi thu nho ko bi che button) + overflow-y: thanh cuon, -y la chieu doc */
+    height: 56vh;
+    overflow-y: auto;
 }
 
 .header__cart-item {
@@ -630,10 +635,19 @@
 
 .header__cart-item-name {
     font-size: 1.4rem;
+    /* xet an text khi qua do dai */
+    line-height: 2rem;
+    max-height: 4rem;
+    overflow: hidden;
     font-weight: 500;
     color: var(--text-color);
     margin: 0;
-
+    flex: 1;
+    padding-right: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: left;
 }
 
 .header__cart-item-price {
@@ -807,6 +821,7 @@
     border-radius: 2px;
     display: none;
     animation: fadeIn ease-in 0.2s;
+    z-index: 1;
 }
 
 .header__search-option::after {
@@ -874,6 +889,7 @@
     border-radius: 2px;
     box-shadow: 0 1px 5px rgb(189, 189, 189);
     display: none;
+    z-index: 2;
 }
 
 .header__search-history-heading {
@@ -949,6 +965,23 @@
     margin-left: 9px;
 }
 
+.category-item {
+    position: relative;
+}
+
+.category-item:first-child::before {
+    display: none;
+}
+
+.category-item::before {
+    content: "";
+    border-top: 1px solid #e1e1e1;
+    position: absolute;
+    top: 0;
+    left: 16px;
+    right: 16px;
+}
+
 .category-item--active .category-item__link {
     color: var(--primary-color);
 
@@ -966,9 +999,9 @@
 
 .category-item__link {
     position: relative;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--text-color);
-    padding: 4px 16px;
+    padding: 8px 20px;
     text-decoration: none;
     display: block;
     transition: right linear 0.1s;
@@ -1057,16 +1090,35 @@
 
 
 /* Product item  */
+.home-product {
+    margin-bottom: 10px;
+}
+
 .home-product-item {
+    display: block;
+    text-decoration: none;
     margin-top: 10px;
     background-color: var(--white-color);
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.1);
+    transition: transform linear 0.1s;
+    will-change:  transform;
+}
+
+.home-product-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0.1rem 2rem 0 rgba(0, 0, 0, 0.05);
+
 }
 
 .home-product-item__img {
     padding-top: 100%;
     background-size: contain;
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }
 
 .home-product-item__name {
@@ -1110,12 +1162,16 @@
 }
 
 .home-product-item__like {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 i.home-product-item__like-icon-fill {
     color: var(--primary-color);
     display: none;
+}
+
+i.home-product-item__like-icon-empty {
+    color: #595959;
 }
 
 .home-product-item__like--liked .home-product-item__like-icon-fill {
@@ -1129,16 +1185,35 @@ i.home-product-item__like-icon-fill {
 
 .home-product-item__rating {
     font-size: 1rem;
-    transform: scale(0.7);
+    /* use transform thu nho icon hon  */
+    transform: scale(0.8);
     transform-origin: right;
     color: #d5d5d5;
+    margin:-1px 0 0 auto;
+}
+
+.home-product-item__gold {
+    color: var(--star-gold-color);
+    
+}
+
+.home-product-item__sold {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-left: 6px;
 }
 
 .home-product-item__origin {
-
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 10px 0;
+    color: #595959;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 .home-product-item__brand {
+
 
 }
 
@@ -1146,18 +1221,94 @@ i.home-product-item__like-icon-fill {
 
 }
 
+/* tag yeu thich */
 .home-product-item__favourite {
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    color: var(--primary-color);
+    background-color: currentColor;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    padding-right: 4px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.home-product-item__favourite span {
+    color: var(--white-color);
+    
 
 }
 
+.home-product-item__favourite::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    border-top: 3px solid currentColor;
+    border-left: 3px solid transparent;
+    filter: brightness(60%);
+
+}
+
+.home-product-item__favourite i {
+    color: var(--white-color);
+    font-size: 0.9rem;
+    margin: 0 2px 0 5px;
+    
+
+}
+
+/* tag sale-off  */
 .home-product-item__sale-off {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    background-color: rgba(255, 216, 64, 0.94);
+    border-top-right-radius: 2px;
+}
+
+.home-product-item__sale-off::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-width: 0 20px 5px;
+    border-style: solid;
+    border-color: transparent rgba(255, 216, 64, 0.94) transparent rgba(255, 216, 64, 0.94);
 
 }
 
 .home-product-item__sale-off-percent {
-
+    color: #ee4d2e;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    position: relative;
+    top: 4px;
 }
 
 .home-product-item__sale-off-label {
+    color: var(--white-color);
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    position: relative;
+    top: 7px;
+    font-weight: 600;
+}
 
+/* Pagination, css rieng */
+.home-product__pagination {
+    margin: 48px 0 32px 0;
+}
+
+
+/* footer */
+.footer {
+    
 }
