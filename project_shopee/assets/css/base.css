@@ -113,11 +113,6 @@ html {
     animation: growth linear 0.1s;
 }
 
-.modal__inner{
-
-}
-
-
 /* Button style  */
 .btn {
     min-width: 124px;
@@ -203,10 +198,6 @@ html {
     z-index: 1;
 }
 
-.select-input__item {
-
-}
-
 .select-input__link {
     font-size: 1.4rem;
     color: var(--text-color);
@@ -254,10 +245,6 @@ html {
     line-height: var(--height);
     text-align: center;
     border-radius: 2px;
-}
-
-.pagination-item__icon {
-
 }
 
 
