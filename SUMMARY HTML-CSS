@@ -1,66 +1,228 @@
 --------------------------------------------------------------------------------------------------------------
+	
 
+SUMMARY HTML-CSS Couses trên F8:
+ 
+-----------------------------------[10/02/2022]
+-----------------------------------[21/02/20222]
 
+I. Skill:
+- Xd đc UI/UX website bky.
+- Pt chi tiết th.ph 1 web.
+- Đặt tên class theo chuẩn BEM.
+- Xd layout vs Flexbox.
+- Làm hieu ứng vs Animation. 
+- Xd UI responsive.
+- anything skills.
 
-
-
+II. Link document
+- https://docs.google.com/document/d/1oJG3vTV7llMJ1xFGuTi_2IypXqXJ8JzxfHEkEkeeMqM/edit?usp=sharing 
 
 =============================================================================================================
+=============================================================================================================
 
-SUMMARY:
+--PART 1: HTML-CSS
+-------------------------------------------
+- Dev tools? --> Inspect Element (ấn F12 --> run): function tags: Elements, Styles, Console, Source,...
+- Link doc HTML: https://www.w3schools.com/html/default.asp 
+- Link dOC css: https://www.w3schools.com/cssref/css_selectors.asp
 
------------------------------------[10/02/2022]
-111. HTML
-- Cau truc html
-- tag thong dung: <h1-h6>, <p>, <br>, <hr>, <img>, <a>, <ul>/<ol><li>, <table>, <input>, <button>, <div>
-- ..........
-- attribute in html: title,...
-- how to create fast folder & file
+-------------------------------------------
+
+1.1. HTML
+-------------
+- HTML?
+- Cau truc? 
+- Tip: comment?, 
+- Tag thong dung: <h1-h6>, <p>, <br>, <hr>, <img>, <a>, <ul>/<ol><li>, <table> (<th> --> <tr> --> <td>), <input>, <button>, <div>(*: tính chất khối, phân tách rõ dàng),...
+- Attribute in html: thuộc tính in tag của html, e.g: title,....
+link doc: https://www.w3schools.com/html/default.asp 
+- How to create new project: 
+	+) create fast folder & file, e.g: assets/css/base.css --> ấn "tab"
+	+) ...
 
 
-222. CSS
-2.1 css in html: internal, external, inline
-- Css selector: chọn các ptu (elements) --> để style cho nó, (elememt selector, id selector, class selector)
-	=> note: +) 1 thẻ có thể cả ID & class, đặt 1/nhiều class cho thẻ html(cách nhau dấu cách) 
-		 +) cách đặt tên, e.g: class="box box1" (.name_1 {}: css chung, .name_2 {} css rieng) 
-		+) cách call id, class, elememt:
-	=> độ ưu tiên selector: 
-		+)  Internal, External: dựa vào cách đặt code, tag <style> gọi sau thì coi là mới nhất, đc ưu tiên hơn <link>, đặt code ngc lại <style>trước <link>, ưu tiên <link>
-		+)  !important -max > Inline -1000 > #id - 100 > .class - 10 > tag - 1 (ưu tiên điểm cao hơn)
-		+) Equal Specifitical? => Khi gọi lại trùng nhau => ưu tiên cái sau
+1.2. CSS
+-------------
+- CSS?
+- how to use in html(declare, use): 3 pp: internal, external, inline => external ưu tiên use, 2 loại còn lại use 1 số trg hợp đb, css inline(email, background-image).
+- Tip: 
+	+) gõ code nhanh (create div, các thẻ html, đặt tên id, class,..)
+	+) emmet code nhanh hơn: phím tắt, đọc doc
+	+) 
+
+1.2.1. ID, Class: 
+	- how to đặt tên ID, (id: định danh duy nhất, e.g: id="app-header" => call: #app-header{})
+	- how to đặt tên class, class: use 1/n` ptu khác nhau, e.g: class="app-navbar" => call: .app-navbar{})
+		+) đặt 2/n` class(cách nhau " ") => class="app-navbar app-navbar__heading" => call: .app-navbar/.app-navbar__heading/.app-navbar.app-navbar__heading
+		=> note: đặt tên class theo tiêu chuẩn BEM.
+
+1.2.2. Css selector: chọn các ptu (elements) --> để style cho nó, 3 loại elememt selector, id selector, class selector
+ 	- note: +) cách call = link doc: https://www.w3schools.com/cssref/css_selectors.asp
+		+) 1 thẻ có thể cả ID & class, đặt 1/n` class cho thẻ html(cách nhau dấu cách "") 
+		+) cách đặt tên, e.g: class="box box1" (.name_1 {}: css chung, .name_2 {} css rieng) 
+		+) Reset CSS: *{} --> bước đầu làm css.
+
+	- độ ưu tiên selector: 
+		+)  Internal, External: dựa vào cách đặt before, after code, tag <style> gọi sau --> đc ưu tiên hơn <link> trc, đặt code ngc lại <style>trước <link>, ưu tiên <link> hơn.
+		+) !important (+max) > Inline (+1000) > #id (+100) > .class (+10) > tag (+1) = (ưu tiên điểm cao hơn)
+		+) Equal Specifitical? => Khi gọi lại trùng nhau => ưu tiên cái gọi sau
 		+) Universal selector and inherit? (Độ ưu tiên Universal và inherit = 0). Universal: *{} , inherit: html {}
-2.2 CSS Variable: 
-	=> 2 type: gloal(declare in :root) & local(declare in tag)
-	=> 
 
-2.3 CSS Units: 
-	=> 2 type: absolute(tuyet doi): px,pt,cm,mm,... 
-		& relative(tuong doi):  +) %: change follow <body>, use: chia layout 
-					+) rem => change follow <html>, thg ddc use > (em)
- 					+) em => change follow phụ thuộc vào thuộc tính cùng tên ở thẻ gần nhất, tính từ ngoài thẻ đó: ... -> <body> … -> <html> …. -> <style>
-					+) vw & vh (viewport-width & viewport-heiht): vw: khung nhìn ngang màn hình & vh:  khung nhìn dọc màn hình, vw,vh # %, vì: % phụ thuộc <body>, còn vw phụ thuộc khung nhìn. 
+1.2.3. CSS Variable: 
+	- why đặt biến? tái use lại, chỉ khai báo 1 lần, when change chỉ fix 1 chỗ declare.
+	- 2 type: gloal(declare in :root) & local(declare in <tag>)
+	=> syntax: --name_variable-attribute, e.g: --text-color: #fff;
 
-					+) còn rất nhiều units khác,...
-2.4 CSS Funtions:
+1.2.4. CSS Units: 
+	- 2 type: absolute(tuyet doi) & relative(tuong doi):
+	- absolute: px,pt,cm,mm,... (thg use: px)
+	- relative:
+		+) %: change follow <body>, use: chia layout 
+		+) rem => change follow <html>, thg ddc use > (em), rem used cho units của kích thước màn hình PC, Tablet, Mobile,..
+		+) em => change follow phụ thuộc vào thuộc tính cùng tên ở thẻ gần nhất, tính từ ngoài thẻ đó: ... -> <body> … -> <html> …. -> <style>
+		+) vw & vh (viewport-width & viewport-heiht): vw: khung nhìn ngang màn hình & vh:  khung nhìn dọc màn hình, (vw,vh) # (%), vì: % phụ thuộc <body>, còn vw,vh phụ thuộc khung nhìn ngang/dọc. 
+		+) còn rất nhiều units khác,...
+
+1.2.5. CSS Funtions:
 	=> var(): 
 	=> linear-gradient(): dải màu chuyển đều đặn
-	=> rgba()
-	=> rgb(): màu 
-	=> calc(): tính toán, calc(10px + 12%)
-	=> attr():  get values của attr, thg use vs lớp giả(Pseudo elements) 
+	=> rgba(): độ trong suốt màu.
+	=> rgb(): màu bthg
+	=> calc(): tính toán?, calc(10px + 12%)
+	=> attr(): get values của attr, thg use vs lớp giả(Pseudo elements) 
+	=> 1 số function khác,...
 
 	
-2.5 Pseudo classes:
-	=> :root
-	=> :hover  => when di chuot
-	=> :active   => when click
+1.2.6 Pseudo classes:
+	=> :root => declare biến
+	=> :hover  => when di chuot=> run
+	=> :active   => when click=> run
 	=> :first-child  => select đàu tiên.
-	=> :last-child
+	=> :last-child => select cuối.
+	=> :nth-child(?) => select theo index
+	=> 1 số  khác,...
 
------------------------------------[15/02/2022]
 
-2.6 Pseudo elements: 
-	=> 
+1.2.7. Pseudo elements: 
+	=> ::before => luôn phải có content: ""; & vtri: đầu
+	=> ::after  => tg tu & vtri: cuối.
+	=> ::first_letter => ptu đầu of dòng
+	=> ::first-line => dòng đầu of đoạn
+	=> ::selection =>ptu chon
 
+
+
+
+--PART 2: Đệm, viền và khoảng lề (CSS)
+-------------------------------------------
+- Marign[Border(Padding(content))]
+- 4 attribute (4 hướng): (top) & (right) & (bottom) & (left) => chiều kim đồng hồ.
+- quy tắc khi declare: e.g: padding --> > tg tự cho margin, border.
+	+) padding: 10px => tự hiểu cả 4
+	+) padding: 10px 12px => (top-bottom) & (left-right)
+	+) padding: 10px 12px 14px => (top) & (right-left) & (bottom)
+	+) padding: 10px 12px 14px 8px => (top) & (right) & (bottom) & (left)
+
+- note: padding, border làm dày kích thước so vs ban đầu chưa có padding/border.
+
+- tip: use float:left/right; => làm all elment chịu ảnh hg đẩy sang left/right.
+
+-------------------------------------------
+2.1. Padding
+	- Use dev tool: trỏ đến → computed: chi tiết khối div đó.
+	- padding(content): ôm content
+	
+
+2.2. Border
+	- border ôm padding, margin ko hẳn ôm border
+	- các attribute khác = https://www.w3schools.com/css/css_border.asp 
+	- border: 10px solid #333;  =>  width > style > color => border-top/tg tự 3 hướng còn lại
+	- Note: application cho việc tạo mũi tên hình tam giác & can create 1 hình đặc biệt.
+	
+
+2.3. Margin
+	- margin: tạo khoảng cách => mục đích tách nhau (ko làm dày kích thước như padding/border),  padding& border chỉ làm dày lên chứ ko tách nhau ra đc.
+	- 
+
+
+2.4. Box-sizing
+	- khi thêm padding/border => tăng size width&height so vs khi chưa có => giữ nguyên như size ban đầu, use: box-sizing: border-box; 
+	- khi  size width&height tăng quá lớn => box-sizing, ko tác dụng.
+	- 1 số attribute: unset: hủy đi
+
+
+
+
+--PART 3: Thuộc tính tạo nền (CSS)
+-------------------------------------------
+- Background Shorthand:  background: #fff url('../img/slider/slider1.jpg') top center / cover no-repeat;
+	=>  background: mau(#fff) url() vtri(top-center) / kichthuoc(cover) tinhschat(ko lặp)
+
+
+
+-------------------------------------------
+
+3.1. Background-clip
+	-  quyết định đổ background color từ đâu (use cùng với attr background-color)
+	- background-clip: padding-box; => đổ từ padding.  || content-box;  => đổ từ content 
+		& default: đổ từ border-box.
+
+
+3.2. Background-image
+	- syntax: background-image: url();
+	- can use add attr khác = cách nhau "," => background-image: url(), url();
+	- 1 số attr đb: background-size: 100%; background-repeat: no-repeat;/ repeat; lặp / repeat-x; lặp chieu ngang / repeat-y; lặp dọc
+
+
+	
+3.3. Background-size keywords
+	- thay vì sử dụng units tương đối/tuyệt đối như: background-size: 100%;/50px 
+		=> sử dụng keyword: 
+			+) contain: auto chọn chiều lớn hơn để căn ko bị vỡ ảnh và khi change size khung nhìn => ảnh ko bị che khuất.
+			+) cover:  auto chọn chiều lớn hơn để căn ko bị vỡ ảnh và khi change size khung nhìn => ảnh bị che khuất.
+
+
+3.4. Background-origin
+	- tính chất tg tự vs Background-clip (chonj vtri đổ ảnh từ đâu, use cùng vs background-image).
+
+
+
+3.5. Background-position
+	- vị trí image
+	- background-position: top right => trên-phải // background-position: top  => default 1 values là center. 
+		// background-position: top 10px right 20px => kết hợp key-word vs value tuyệt đối,...
+		// background-position: 10px 20px; (trục Ox, Oy) => kết hợp trục tọa độ...
+
+
+
+
+--PART 4: Thuộc tính vị trí
+-------------------------------------------
+- Trong UI sẽ có các tầng layout chồng lên nhau để show và chúng sẽ có vtri đặc biệt, e.g: click vào "Thông báo" => 1 Popup show list thông báo, vtri của nó ngay bên dưới lề thẳng với chữ "Thông báo.
+	=> Vậy use để css vtri cho 1 số trg hợp đb = 4 loại: Relative (tg đối), absolute (tuyệt đối), fixed (change pụ thuộc khung nhìn(vh/vw)), sticky (change pụ thuộc khung nhìn (vh/vw), ko đc nhiều trình duyệt hỗ trợ).
+
+- Tip: mờ trang web (thường use để khi có popup con hiện lên, mờ đi chỗ ko thuộc con) = set 4 hướng =0 và ko set width, height
+
+
+- note: xét z-index xét vtr uu tiên show trên các tầng layout của Ui
+
+
+
+-------------------------------------------
+
+4.1. CSS Position: Relative
+	- Relative (tg đối): lấy chính nó làm gốc tọa độ, tính chất ko bị pu thuoc đtg nào.
+		=> use top/right/bottom/left để fix vtri cần.	
+
+
+4.2. CSS Position: Absolute
+	- Absolute (tuyet đối): tính chất bị pu thuoc vào thằng <tag> cha gần nhất có thuoc tính position(1in4) để lấy đó làm gốc tọa độ.
+	- Tip nhận biết: khi cần di chuyển vtri thằng con xung quanh thằng cha => use Absolute.
+
+
+4.3. CSS Position: Fixed
+	- Fixed: bị pu thuoc vào thằng cửa sổ trình duyệt 
+	- Tip nhận biết: Thanh Header đầu, khi cuộn xuống --> cố định ở đầu.
 
 
