@@ -214,7 +214,7 @@ II. Link document
 4.1. CSS Position: Relative
 	- Relative (tg đối): lấy chính nó làm gốc tọa độ, tính chất ko bị pu thuoc đtg nào.
 	- áp dụng:      +) muốn di chuyển 4 hướng 
-			+) làm tọa độ oxy --> tk con (absolute;) 			
+			+) làm tọa độ oxy cho tk con (absolute;)			
 		
 
 
@@ -238,6 +238,299 @@ II. Link document
 
 --PART 5: Project 1: Xây dựng Web The Band
 -------------------------------------------
+- Website mẫu: https://www.w3schools.com/w3css/tryw3css_templates_band.htm
+	=> đây là 1 trang thể loại ONE PAGE
+- 4 step triển khai:
+	+) phan tich
+	+) dựng base (xây móng)
+	+) xd từng pần theo pt
+	+) hoàn thiện
+
+- Cấu trúc Web: (bổ sung)
+
+
+
+- Thành phần đặc biệt: (bổ sung h/ả)
+	+) UI Modal: là giao diện nằm trên all UI web, can là modal: login/logout/thanhtoán/......
+	+) thành phần: 1 màn hình nhỏ chính giữa Modal, xung quanh có 1 lớp overplay mờ mờ.
+		=> cho nó nằm trên UI web => use position: fixed; 
+	+) Để cho tk con show nằm chính giữa thằng cha => use t/c flexbox => display: flex; và căn giữa chiều ngang & dọc.
+
+
+- Đưa phần 5.3. Tạo project base => lên đây + thêm 1 số chú thích nữa.  (bổ sung)
+
+
+
+- Tất cả shorthand = key-word + ấn "tab" (can demo ảnh nếu khó)
+	+) tip create fast folder, file. => đã nêu ở bài trc
+	+) declare css nhanh => link:css
+	+) create <div> cùng đặt tên id, class => #name_id  || .class_name
+	+) (demo ảnh) Multiple selections (multi-cursor): use nhiều con trỏ chuột thao tác code nhanh hơn 
+		=> step 1: xác định vùng có sự giống nhau --> chọn vùng đó = bôi đen vùng cần thao tác đó (check lại đã đúng nhg phần select?)
+		=> step 2: 2 cách: cách 1: ctrl +shift + L → chọn all  // cách 2: ctrl +D → chọn từng cái 1
+		=> step 3: để thao tác bôi đên 1 đoạn code (e.g: bôi đen các tên class) => alt + shift + ( → ) 
+		Beside, Tạo multi-cursor = alt + shift + (mũi tên down)
+
+	+) tạo kết hợp các tag: ul#nav>li*5>a
+	+) ấn alt + (mũi tên lên/xg) => di chuyển dòng code lên/xuống.
+	+)
+	+)
+
+
+- Tính chất của 1 số attribute, tag đặc biệt:
+	+) block => t/c khối chiếm hết width bởi tag cha chứa nó, phân tách rõ dàng
+	+) inline => trong 1 dòng 
+	+) display: => hiển thị ntn? => e.g: display: inline-block => t/c block + t/c inline // display: block => t/c block 
+	+) <a>: 
+		.) text-decoration: none;  =>  bỏ gạch chân của tag <a>
+
+
+	+) <ul>:
+		.) list-style: none;  => remove dấu . của default
+
+
+	+) text-transform: uppercase;   => viết hoa
+	+)
+	+) box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  => đổ bóng
+
+	+) font-weight: 300; => độ dày/mỏng text
+
+	+) float:left/right; => làm all elment chịu ảnh hg đẩy sang left/right.
+	+) Css Text: letter-spacing: 4px; => giãn chữ  // font-style: italic; => chữ nghiêng // text-align: justify;  => căn đều 2 bên
+	+) opacity: 1->0; => attr làm giảm độ tương phản
+	+) line-height: 1.4(English) or 1.6 (tiếng việt)   => khoảng cách 2 dòng
+	+) Border: border-radius: 4px; => bo góc ảnh // 
+	+) Khi Css để dễ dàng quan sát nhất => sử dụng dev tools
+		.) Ấn F12 --> open dev tool
+		.) 3 cách css:  cách 1: css trên element.style {} chính là Inline style
+			cách 2: trên dev tool --> ấn vào tag cần css → ấn “+” → css trực tiếp
+			cách 3: (ưu tiên use) declare các class vào file .css --> save lại --> lên dev tool, css thẳng vào class đó.
+	+) “for” trong <label> --> khi click vào label thì auto “for” tới id tag cần chọn, e.g: khi click label → tới thẻ input (for chỉ chứa id, for=”#id”)
+	+) Khi use Responsive, 1 số attribute ko nên fix cứng values tuyệt đối, vì: khi change width/height => sai vtri 
+		=> use hàm calc(); => e.g: max-width: calc(100% - 32px);
+		=> use value tương đối: %, vw/vh
+	+)
+	+)
+	+)
+	+)
+	+)
+	+)
+
+
+
+- Skill:
+	+) Căn giữa:
+		1. căn giữa dòng(<tag>), đoạn bôi đen => line-height = height cuar tag chứa
+			=> beside, use padding
+		2. căn giữa bthg: width: 100% => text-align: center; 
+
+
+
+	+) Hover:
+		.) color/background-color
+		.) cursor: pointer;    => bàn tay
+		.)
+		.)
+		.)
+		.)
+
+	+) gộp 2/n` selector = cách nhau dấu ", " => e.g: .header__navbar-item, .header__narbar-item-link { }
+
+	+) how to tìm nhanh selector trong file .css  => COn trỏ hiện tại ở file .css => open OUTLINE trong "EXPLORER"
+ 
+	+) thiết kế đẹp: set vaules tuyệt đối là num : hết cho 4, e.g: 12px, 16px
+
+	+) khi ko nhớ attribute css =>  tìm search gg, syntax: css + attribute + property
+
+
+	+) xét min/max cho width/height => e,g: min-height => để xét cho bài toán hiển thị.
+
+
+  	+) khi use thư viện cho icon, khi muốn css cho icon đó thì đặt thêm tên mới class --> vì: sau này đổi icon đó thì css ko bị mất. 
+
+	+) dính header lên top => position: fixed;   top: 0;  right: 0;   left: 0; 
+
+	+) để di chuyển tk con xung quanh tk cha, e.g: ghi đè text lên ảnh => tk cha là position: related& con là position: absolute
+	+) khi run code bị error thì trên dev tool trong "Console" -> show error.
+
+	+) Khi làm popup nổi lên UI rất hay bị lỗi các layer đè nhau => xét vtr uu tiên show trên các tầng layout của Ui = z-index: >1 (values >> => ưu tiên >>)
+	+) Khi sử dụng float => sẽ làm thằng cha ko bao đc 3 tk con => xử lý: tạo lớp giả cho tag cha đó, e.g: .row::after {content: ""; display: block; clear: both;}
+	+) 1 số tag (span, a) ko có tính chất block => thêm display: block vào => can set width/height/margin: âm
+		=> beside, display: flex => t/c block OR: float: left/right; => t/c block
+	+) 1 số trg hợp căn lề margin/padding ngoài use values (+), can use: values (-) 
+
+	+) Kĩ thuật tạo animation (bổ sung ảnh)
+
+
+
+	+)
+	+)
+	+)
+	+)
+	+)
+	+)
+
+
+-------------------------------------------
+
+5.1. Phân biệt & gọi tên các thành phần
+	- Thanh phan 1 web: tham khảo: https://viblo.asia/p/code-giao-dien-website-tu-ban-design-phan-1-07LKXkd85V4 
+		=> (bổ sung ảnh thành pan trong doc)
+	- Cau truc:
+		+ Header
+			section.top-bar
+			section.nav-bar
+		+ Main
+			section 1
+			section 2
+			...
+		+ Footer
+	- Details thành phần:
+		+ Header (đầu trang): 
+			=> position: thg trên cùng => (bổ sung ảnh trong doc)
+		+ Navigation: 
+			=> chứa 1 vài button điều hướng web(e.g: home, band, tour,...) => (bổ sung ảnh trong doc)
+			=> position: nằm trong thanh Header
+		+ Breadcrumb: 
+			=> map của giao diện hiện tại, e.g: Home > Web development > Front End > html-css => (bổ sung ảnh trong doc)
+			=> position: dưới Header, trên nội dung cua 1 th.phần web 
+		+ Sidebar: 
+			=> thanh chứa danh sách thành phần 1 mục/web, có thể coi là 1 navi
+			=> position: thg đặt ở bên trái/phai man hình, .  => (bổ sung ảnh trong doc)
+		+ Slider: 
+			=> phần trình diễn nội dung có thể là hình ảnh, video, âm thành,... thg là hình ảnh.
+			=> position: ko cố dịnh vtri     => (bổ sung ảnh trong doc)
+		+ Banner: 
+			=> là image quảng cáo 
+			=> position: ko cố dịnh vtri     => (bổ sung ảnh trong doc)
+
+		+ Content:
+			=> chứa thành phan nội dung chính
+			=> position: nằm bên trong giữa web     => (bổ sung ảnh trong doc)
+
+		+ Footer (chân trang):
+			=> thường là thông tin liên quan web.
+			=> position: cuối trang     => (bổ sung ảnh trong doc)
+
+
+5.2. Phân tích dự án
+	- Header
+	- Slider
+	- Content: Container: (chứa content, có thể coi là content luôn)
+		=> About
+		=> Tour
+		=> Contact
+		=> Image
+	- Footer
+
+
+
+
+5.3. Tạo project base
+	- Crete project: 
+		=> cơ bản 1 folder assets(3 folder con: css, img, fonts) + index.html
+	- setting 1 số cơ bản: 
+		+) HTML => index.html 
+			=> đặt title, icon web + declare: link css + declare: link 1 số thứ # (thư viện: fonts, icon, image,....)
+			=> note: use 1 số thư viện hỗ trợ icon, fonts => e.g: https://themify.me/themify-icons // https://fontawesome.com/icons 
+				.) cách use: gọi đến nhg tên class nó cung cấp.
+		+) CSS  => 3 file(base.css: css chung, main.css: css riêng, responsive.css: css tablet, mobile) 
+			=> base.css => Reset CSS => * {} // html {}  // body {}
+				.) css * { margin: 0; padding:0; box-sixing: border-box}
+				.) css html { font-size: 1.4rem; scroll-behavior: smooth; font-family: Helvetica, Arial , sans-serif;}
+				.) cs  body {}
+
+			=> phần này nêu sơ qua => đến phần project shopee cụ thể.
+			=> Vì mỗi 1 browser (trình duyệt) có css deafult => reset css.
+
+	
+
+
+
+	- Dựa vào phân tích, triển khai lần lượt.
+		+) Dựng khung: 1 tag div chứa contain thành phàn (Header, Main, Footer,...)
+			=> note: những th.phần chính, đặt id thay vì class, còn lại đặt class bthg
+
+
+
+5.4. Header CSS
+	- phan tich: +) vị trí? => đầu
+		+) kích thước => widht = width trình duyệt  ; height = use dev tool
+		+) màu sắc => use dev tool => black
+		+) kiểu dáng(font text, hình tròn,....)
+
+	- create ds gồm: home, band, tour, contact
+
+
+
+
+5.5. Navigation CSS
+	- Menu đa cấp, đặc tính :hover vào show => bthg sẽ là hidden, khi : hover là show.
+		=> e.g: menu 2 cấp: cấp1: tk cha và cấp2: 1 số tk con => use CSS position => gắn mấy tk con dưới cha.
+	- 
+
+
+5.6. Header search CSS
+
+5.7. Header fixed CSS
+
+5.8. Slider CSS
+
+5.9. Team section CSS
+
+5.10. Tour tickets CSS
+
+5.11. Tour places CSS
+
+5.12. Buy tickets modal
+
+5.13. Buy tickets modal Javascript logic
+	- Để lắng nghe hành động (click,...) use js => Đặt tên cho tag đó vs syntax: js-...
+	
+
+khi ấn 1 trong 3 nút, → get được cái element có class=”modal” → thêm “open” ⇒ mục đích hiện form “tickets”: đã đc css. còn để tắt => ấn “X” → remove bỏ “open”
+
+
+5.14.
+
+	- 
+
+
+
+	- 
+
+
+
+
+	- 
+
+
+
+	- 
+
+
+
+
+
+	- 
+
+
+
+
+
+	- 
+
+
+
+
+
+
+
+
+
+
+--PART 5: Project 1: Xây dựng Web The Band
+-------------------------------------------
 
 
 
@@ -245,6 +538,32 @@ II. Link document
 
 -------------------------------------------
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--PART 5: Project 1: Xây dựng Web The Band
+-------------------------------------------
+
+
+
+
+
+-------------------------------------------
 
 
 
