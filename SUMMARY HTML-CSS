@@ -246,7 +246,23 @@ II. Link document
 	+) xd từng pần theo pt
 	+) hoàn thiện
 
-- Cấu trúc Web: (bổ sung)
+- Cấu trúc Web tiêu chuẩn: (bổ sung)
+
+
+- Phân tích dự án Web  (bổ sung)
+	+) phân tích cấu trúc thành phần website đó.
+	+) để css tái sử dụng, clear => phân tích những th.phần chung có UI giống nhau => css chung 
+		=> e.g: button, animation,...
+	+) Phuong phap khi đi dựng từng thành phần chi tiết web(Header, Slider, Containter, Footer,..):
+		1. đi từ ngoài → trong
+		2. từ trên → dưới
+		3. tổng quát → chi tiết
+	 
+	+) phan tich Chi tiet thanh phan:
+		1. vị trí?
+		2. kích thước
+		3. màu sắc
+		4. kiểu dáng(font text, hình tròn,....)
 
 
 
@@ -273,7 +289,11 @@ II. Link document
 
 	+) tạo kết hợp các tag: ul#nav>li*5>a
 	+) ấn alt + (mũi tên lên/xg) => di chuyển dòng code lên/xuống.
-	+)
+	+) code tắt 1 số attribute :
+		.) attribute 1 từ: lấy chữ cái đầu + values + units 
+			=> e.g: h1.2rem => height: 12rem // h12px => height: 12px
+		.) attribute 2 từ: lấy 2 chữ cái đầu ở 2 từ + values + units  
+			=> e.g: mb48px => margin-bottom: 48px // mh32px => max-height: 32px
 	+)
 
 
@@ -317,6 +337,9 @@ II. Link document
 	+)
 
 
+- Kiến thức liên quan đến JS: (bổ sung)
+	- 
+
 
 - Skill:
 	+) Căn giữa:
@@ -354,20 +377,32 @@ II. Link document
 	+) khi run code bị error thì trên dev tool trong "Console" -> show error.
 
 	+) Khi làm popup nổi lên UI rất hay bị lỗi các layer đè nhau => xét vtr uu tiên show trên các tầng layout của Ui = z-index: >1 (values >> => ưu tiên >>)
-	+) Khi sử dụng float => sẽ làm thằng cha ko bao đc 3 tk con => xử lý: tạo lớp giả cho tag cha đó, e.g: .row::after {content: ""; display: block; clear: both;}
+
+	+) Khi sử dụng float => sẽ làm thằng tag cha ko bao đc các tk con => xử lý: tạo lớp giả cho tag cha đó, e.g: .row::after {content: ""; display: block; clear: both;}
+
 	+) 1 số tag (span, a) ko có tính chất block => thêm display: block vào => can set width/height/margin: âm
 		=> beside, display: flex => t/c block OR: float: left/right; => t/c block
+
 	+) 1 số trg hợp căn lề margin/padding ngoài use values (+), can use: values (-) 
 
 	+) Kĩ thuật tạo animation (bổ sung ảnh)
+		- step1: viết @keyframes name_animation {from {} to {}}
+		- step2: decalre vào <tag> cần css, syntax: animation: modalFadeIn ease 0.5s;
+			=> name_animation: modalFadeIn	
+			=> kiểu animation: ease
+			=> time run: 0.5s
+	+) khi use !important, ko use linh tinh, chỉ use vs chỉ có 1 property, tránh làm pức tạp css.
+	+) cách lấy n` tag có cùng format tên class
+		.) e.g: <i> có class bắt đầu là ti-
+			=>  .contact-info i[class*="ti-"] {    width: 30px;    display: inline-block; }
 
+		
+	+) 
 
+	+)
 
 	+)
-	+)
-	+)
-	+)
-	+)
+
 	+)
 
 
@@ -437,7 +472,7 @@ II. Link document
 		+) CSS  => 3 file(base.css: css chung, main.css: css riêng, responsive.css: css tablet, mobile) 
 			=> base.css => Reset CSS => * {} // html {}  // body {}
 				.) css * { margin: 0; padding:0; box-sixing: border-box}
-				.) css html { font-size: 1.4rem; scroll-behavior: smooth; font-family: Helvetica, Arial , sans-serif;}
+				.) css html { font-size: 1.4rem; scroll-behavior: smooth; font-family: Helvetica, Arial , sans-serif;} =>  scroll-behavior: thêm để hiệu hứng khi lăn.
 				.) cs  body {}
 
 			=> phần này nêu sơ qua => đến phần project shopee cụ thể.
@@ -485,52 +520,32 @@ II. Link document
 5.12. Buy tickets modal
 
 5.13. Buy tickets modal Javascript logic
-	- Để lắng nghe hành động (click,...) use js => Đặt tên cho tag đó vs syntax: js-...
-	
-
-khi ấn 1 trong 3 nút, → get được cái element có class=”modal” → thêm “open” ⇒ mục đích hiện form “tickets”: đã đc css. còn để tắt => ấn “X” → remove bỏ “open”
-
-
-5.14.
-
-	- 
+	- Để lắng nghe hành động (click,...) => Đặt tên cho tag đó vs syntax: js-...
+	- Logic xử lý: Khi ấn 1 trong 3 nút → get được cái element có class=”modal”. sau đó xử lý thêm “open” class=”modal open” ⇒ mục đích: để show form “Tickets”: đã đc css cho .moda.open{...} 
+		=> còn để tắt pop-up => bắt được even(sự kiện) click vào nút “X” → remove bỏ “open” =>  class=”modal” như cũ.
+		=> vấn đề: tắt pop-up => ngoài ấn "x" thì bấm ra ngoài pop-up đó cũng phải tắt(hidden) đi
+			=> step 1: khi bấm vào bki đâu trên modal => tắt pop-up = remove bỏ “open”
+			=> step 2: xử lý chỉ khi bấm ra ngoài vùng pop-up mới tắt pop-up => bắt even(sự kiện) click vào modalContainer (chứa pop-up) even.stopPropagation() => stop tính chất inherit của cha modal đó => tức là tk con modalContainer ko remove như tk cha modal.
 
 
 
-	- 
+5.14. Row - columns layout
+	- Khi làm responsive để chia layout rất cần tính chất Row - columns .
+	- Công thức: Chia 12 cột (đc đề cập đến ở bài project Shopee)
+		=> chia layout đẹp hơn
+		=> Để tái use, ko phải css lặp lại nhiều lần =>  css chung .row{} và .col{} 
 
-
-
-
-	- 
-
-
-
-	- 
+5.15. Contact form CSS
+5.16. Map, footer CSS
 
 
 
 
 
-	- 
-
-
-
-
-
-	- 
-
-
-
-
-
-
-
-
-
-
---PART 5: Project 1: Xây dựng Web The Band
+--PART 6: Responsive Web The Band
 -------------------------------------------
+
+
 
 
 
