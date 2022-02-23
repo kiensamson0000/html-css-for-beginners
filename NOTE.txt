@@ -4,12 +4,16 @@ HTML, CSS từ Zero đến Hero
 ______________________________________________
  
 Course: https://fullstack.edu.vn/courses/html-css 
- https://docs.google.com/document/d/1oJG3vTV7llMJ1xFGuTi_2IypXqXJ8JzxfHEkEkeeMqM/edit?usp=sharing 
-
-
-Github course: git@github.com:kiensamson0000/HTML-CSS.git
+- Bổ sung course “Responsive Với Grid System” vào PART 13: https://fullstack.edu.vn/courses/responsive-web-design 
  
-Other reference sources:
+Github course: https://github.com/kiensamson0000/HTML-CSS.git 
+- Chung repo vs course “HTML, CSS Tips & Tricks”
+ 
+Documents related courses:
+- Link revision course: https://docs.google.com/document/d/1IMa3zCuS1J-nwHnJOLNjW45PeUyStZgVUKwx_IeWkb8/edit?usp=sharing 
+- Link document tip & trick HTML-CSS: https://docs.google.com/document/d/1OXX8fmOwLqQCH_oYsIihaMI9bgN1HDjTioncc60JR5A/edit?usp=sharing 
+ 
+Other reference courses:
 https://www.w3schools.com/html/ 
 https://www.w3schools.com/css/ 
 https://goclamweb.com/chuyen-muc/lap-trinh-web/html-css-co-ban/ 
@@ -19,5 +23,5 @@ https://www.youtube.com/watch?v=qz0aGYrrlhU
 https://www.udemy.com/course/html5-fundamentals-for-beginners/learn/lecture/3518498#overview  
 https://www.coursera.org/learn/html-css-javascript-for-web-developers/home/welcome  
 http://html.net/tutorials/html/introduction.php    
- 
+
 
