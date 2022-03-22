@@ -96,3 +96,14 @@ html {
     color: #000;
     background-color: #ccc;
 }
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
