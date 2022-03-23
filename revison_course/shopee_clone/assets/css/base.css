@@ -1,0 +1,30 @@
+/* KHAI BAO BIEN */
+:root {
+    --primary-color: #EE4D2D;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --star-gold-color: #FFCE3E;
+    --brand-primary-color: #ee4d2d;
+    --brand-primary-light-color: rgba(255,87,34,0.1);
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-width-search-height: calc(var(--header-height) - var(--navbar-height));
+
+}
+
+/* RESET CSS */
+* {
+    /* Da reset CSS = thu vien  */
+
+}
+
+html {
+
+}
+
+
+body {
+
+}
