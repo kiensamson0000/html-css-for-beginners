@@ -19,10 +19,269 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- I. BEGIN: SHOP -->
+    <div id="shop">
+        <!-- 1. BEGIN: HEADER-->
+        <header id="header">
+            <div class="grid">
+                <!-- header navbar -->
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <a href="#" class="header__navbar-item header__navbar-item--separate">Kênh Người Bán</a>
+                        <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
+                            Tải ứng dụng
+                            <!-- Header QR code  -->
+                            <div class="header__qr">
+                                <img src="./assets/img/qr_code/qr_code.png" alt="QR CODE" class="header_qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="#" class="header__qr-link">
+                                        <img src="./assets/img/qr_code/app_store.png" alt="App Store" class="header__qr-download-img">
+                                    </a>
+                                    <a href="#" class="header__qr-link">
+                                        <img src="./assets/img/qr_code/google_play.png" alt="Google Play" class="header__qr-download-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-title--no-pointer">Kết nối</span>
+                            <a href="https://www.facebook.com/ShopeeVN" class="header__navbar-icon-link" target="_blank">
+                                <i class="header__navbar-icon fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/accounts/login/?next=/Shopee_VN/" class="header__navbar-icon-link" target="_blank">
+                                <i class="header__navbar-icon fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-notify">
+                            <a href="" class="header__narbar-item-link">
+                                <i class="header__navbar-icon far fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <!-- Notification -->
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="./assets/img/product/product-shop/product14.jpeg" alt="image my pham" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Giày bóng rổ Nike LeBron Witness 5</span>
+                                                <span class="header__notify-description">Mô tả Giày bóng rổ Nike LeBron Witness 5 ra mawts nawm 2022</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="./assets/img/product/product-shop/product2.jpg" alt="Ao thun adidas" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Áo Thun Adidas Nam Nữ Chính Hãng 100% Cotton Adidas Họa Tiết 01 - 03</span>
+                                                <span class="header__notify-description">Chất liệu : 100% cotton. Hình in không bong tróc khi giặt máy.  Full size Nam nữ : XS => 5XL. (35KG - 125Kg)</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="./assets/img/product/product-shop/product3.jpg" alt="Ao thun puma" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Áo Thun Nam Nữ Tay Ngắn Chất Cotton Logo PU.MA In Nhũ Vàng, Áo Phông Unisex Nhiều Màu Sắc Vải Cotton Mát Thời Trang</span>
+                                                <span class="header__notify-description">Áo thun tay lỡ áo sweater Áo Hoodie unisex ,áo thun phản quang chuẩn chất lượng, shop cam kết 1 đổi 1.</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="./assets/img/product/product-shop/product4.jpg" alt="Sneaker jodan" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Giày jodan off white chinh hang [FULL BOX+BILL] da nhăn, dày dặn, bo viền, giá rẻ nhất thị trường.</span>
+                                                <span class="header__notify-description">Giày jodan off white chinh hang [FULL BOX+BILL] da nhăn, dày dặn, bo viền, giá rẻ nhất thị trường.</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                                </footer>
+
+                            </div>
+                            
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="https://help.shopee.vn/vn/s/" class="header__narbar-item-link" target="_blank">
+                                <i class="header__navbar-icon far fa-question-circle"></i>
+                                Trợ giúp
+                            </a> 
+                        </li>
+                        <!-- Login/Signup -->
+                        <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký</li>
+                            <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li> -->
+
+                        <!-- Logined: User info -->
+                        <li class="header__navbar-item header__navbar-user">
+                            <img src="./assets/img/user/icon_user.png" alt="" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Khuất Huy Kiên</span>
+
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Địa chỉ của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Đơn mua</a>
+                                </li>
+                                <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                    <a href="">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- header with search -->
+                
+            </div>
+
+        </header>
+        <!-- END: HEADER -->
 
 
+        <!-- 2. BEGIN: CONTAINER -->
+        <div id="container">
+
+        </div>
+
+        <!-- END: CONTAINER -->
 
 
+        <!-- 3. BEGIN: FOOTER -->
+        <div id="footer">
+
+        </div>
+
+        <!-- END: FOOTER -->
+
+    </div>
+
+    <!-- END: SHOP -->
+
+    <!-- II. BEGIN: MODAL-Login/Register -->
+    <!-- <div class="modal">
+        <div class="modal__overplay"></div>
+
+        <div class="modal_body"> -->
+
+            <!-- Register form  -->
+            <!-- <div class="auth-form">
+                <div class="autho-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                        <span class="auth-form__switch-btn">Đăng nhập</span>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" name="" placeholder="Email của bạn" class="auth-form__input">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" name="" placeholder="Mật khẩu của bạn" class="auth-form__input">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" name="" placeholder="Nhập lại mật khẩu của bạn" class="auth-form__input">
+                        </div>
+                    </div>
+
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                            Bằng việc đăng kí, bạn đã đồng ý với Shopee về
+                            <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+                            <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
+                        </p>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn btn--normarl auth-form__controls-back ">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG KÝ</button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                        <span class="auth-form__socials-title">
+                            Kết nối với Facebook
+                        </span>
+                        
+                    </a>
+
+                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-google"></i>
+                        <span class="auth-form__socials-title">
+                            Kết nối với Google
+                        </span>
+                    </a>
+                </div>
+
+            </div> -->
+
+            <!-- Login form  -->
+            <!-- <div class="auth-form">
+                <div class="autho-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng nhập</h3>
+                        <span class="auth-form__switch-btn">Đăng ký</span>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" name="" placeholder="Email của bạn" class="auth-form__input">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" name="" placeholder="Mật khẩu của bạn" class="auth-form__input">
+                        </div>
+                    </div>
+
+                    <div class="auth-form__aside">
+                        <div class="auth-form__help">
+                            <a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
+                            <span class="auth-form__help-separate"></span>
+                            <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+                        </div>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn btn--normarl auth-form__controls-back ">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                        <span class="auth-form__socials-title">
+                            Kết nối với Facebook
+                        </span>
+                        
+                    </a>
+
+                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-google"></i>
+                        <span class="auth-form__socials-title">
+                            Kết nối với Google
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div> -->
+
+    <!-- END: MODAL-Login/Register -->
 </body>
 </html>
